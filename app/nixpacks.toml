@@ -5,3 +5,5 @@ cmds = ["go build -o app ."]
 
 [start]
 cmd = "./app"
+# Coolify health checks need curl inside the final runtime image (issue #2875).
+runImage = "buildpack-deps:jammy-curl"
